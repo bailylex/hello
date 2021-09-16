@@ -1,8 +1,13 @@
-import { render, screen } from '@testing-library/react';
-import App from './App';
+// import App from './App';
+const {Builder, By} = require('selenium-webdriver');
+const assert = require("assert");
+let driver = new Builder().forBrowser('chrome').build();
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
-});
+(async function test() {
+    // Navigate to url
+    await driver.get('http://localhost:3000');
+
+    // Get message
+    let messageElement = driver.findElement(By.id('root'));
+    assert.equal(await messageElement.getText(), 'Hello Alex');
+})();
