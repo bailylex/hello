@@ -11,8 +11,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "node ./src/App.test",
-    "eject": "react-scripts eject"
+    "test": "jest",
+    "eject": ""
   },
   "eslintConfig": {
     "extends": [
@@ -20,6 +20,7 @@
     ]
   },
   "devDependencies": {
+    "jest": "26.6.0",
     "selenium-webdriver": "^4.0.0-rc-1"
   },
   "browserslist": {
