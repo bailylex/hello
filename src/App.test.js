@@ -9,6 +9,5 @@ test('greetings', async () => {
     // Get message Element
     let messageElement = await driver.findElement(By.id('root')).getText();
 
-
     expect(messageElement).toBe('Hello Alex');
 });
